@@ -1,0 +1,15 @@
+{
+  "name": "vatsas-binarysearch-pack",
+  "version": "1.0.0",
+  "description": "just a normal binary search js code to learn how npm packages are published. it does do a binary search tho lol!",
+  "main": "binarysearch.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Srivatsa",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
