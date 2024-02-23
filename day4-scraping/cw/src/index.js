@@ -13,17 +13,16 @@ async function fetchData(url) {
     }
 }
 
-// Function to extract job postings from the HTML content
 function extractJobs(html) {
     const $ = cheerio.load(html);
     const jobs = [];
 
-    $('.jobTuple').each((index, element) => {
-        const jobTitle = $(element).find('.title').text().trim();
-        const company = $(element).find('.companyName').text().trim();
-        const location = $(element).find('.location').text().trim();
-        const experience = $(element).find('.experience').text().trim();
-        const postedDate = $(element).find('.date').text().trim();
+    $('.JobCardList__Grid-sc-1v9ot9b-1.bZUXMN [data-testid="job-card"]').each((index, element) => {
+        const jobTitle = $(element).find('.JobListCardstyles__JobTitle-ffng7u-7.cuaBGE').text().trim();
+        const company = $(element).find('.JobListCardstyles__JobCompany-ffng7u-8.gguURM').text().trim();
+        const location = $(element).find('.JobListCardstyles__ContentContainer-ffng7u-9.JobListCardstyles__BottomContainer-ffng7u-11.jgNAYT.kgLuhL > div:nth-child(3)').text().trim();
+        const experience = ''; // Adjust this selector according to the actual HTML structure
+        const postedDate = ''; // Adjust this selector according to the actual HTML structure
 
         jobs.push({
             jobTitle,
